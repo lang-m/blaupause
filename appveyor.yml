@@ -17,8 +17,9 @@ install:
   - python -m pip install --upgrade pip nbval pycodestyle
 
 test_script:
-  - pytest -v
-  - pytest -v --doctest-modules --ignore=sampleproject/tests sampleproject
+  - python -m pytest -v
+  - python -m pytest -v --doctest-modules --ignore=sampleproject/tests sampleproject
+  - python -m pycodestyle --filename=*.py .
   # - python -c "import discretisedfield as df; import sys; sys.exit(df.test())"
   # - python -m pytest -v --doctest-modules --ignore=discretisedfield\tests discretisedfield
   # - python -m pytest -v --nbval docs\ipynb\
