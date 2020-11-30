@@ -18,6 +18,7 @@ install:
 
 test_script:
   - pytest -v
+  - pytest -v --doctest-modules --ignore=sampleproject/tests sampleproject
   # - python -c "import discretisedfield as df; import sys; sys.exit(df.test())"
   # - python -m pytest -v --doctest-modules --ignore=discretisedfield\tests discretisedfield
   # - python -m pytest -v --nbval docs\ipynb\
