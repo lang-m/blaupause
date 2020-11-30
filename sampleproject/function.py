@@ -5,16 +5,26 @@ def add(a, b):
 
     Parameters
     ----------
-    a
+    a : numbers.Real
 
-        First number.
+        First operand.
 
-    b
+    b : numbers.Real
 
-        Second number.
+        Second operand.
 
     Returns
     -------
+    numbers.Real
+
         Sum of a and b.
+
+    Examples
+    --------
+
+    >>> import sampleproject
+    >>> sampleproject.add(1, 2)
+    3
+
     """
     return a + b
