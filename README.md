@@ -1,6 +1,13 @@
 # Sample Python project
 
-This project is used for learning/demonstrating the development of a Python project, including:
-- Testing with pytest
+This project is used for demonstrating the development of a Python project, including:
+- Testing with pytest/doctests
+- code coverage
 - continuous integration
-- creating a conda package
+  - Travis
+  - Appveyor
+- docker
+- make files
+- packaging
+- documentation
+- licensing 

@@ -8,9 +8,10 @@ setuptools.setup(
     version='0.1',
     description=('Example package used as a template for setting up '
                  'Python packages/repositories.'),
-    long_description=long_description,  # these two lines allow using markdown README
+    # these two lines allow using markdown README
+    long_description=long_description,
     long_description_content_type='text/markdown',
-    #url='https://ubermag.github.io',
+    # url='https://ubermag.github.io',
     author='Martin Lang and Marijan Beg',
     packages=setuptools.find_packages(),
     include_package_data=True,
