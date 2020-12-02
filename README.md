@@ -6,6 +6,7 @@ Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 | Description | Badge |
 | --- | --- |
 | Builds | [![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/sampleproject/branch/main) |
+|     | [![Build Status](https://travis-ci.org/lang-m/sampleproject.svg?branch=main)](https://travis-ci.org/lang-m/sampleproject) |
 
 ## About
 
