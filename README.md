@@ -7,6 +7,7 @@ Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 | --- | --- |
 | Builds | [![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/sampleproject/branch/main) |
 |     | [![Build Status](https://travis-ci.org/lang-m/sampleproject.svg?branch=main)](https://travis-ci.org/lang-m/sampleproject) |
+| Coverage | [![codecov](https://codecov.io/gh/lang-m/sampleproject/branch/main/graph/badge.svg?token=90KVILJ4F4)](https://codecov.io/gh/lang-m/sampleproject) |
 
 ## About
 
