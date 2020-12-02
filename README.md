@@ -1,7 +1,15 @@
 # Sample Python project
-[![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/sampleproject/branch/main)
+Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 
+<sup>1</sup> *Faculty of Engineering and Physical Sciences, University of Southampton, Southampton SO17 1BJ, United Kingdom*    
 
+| Description | Badge |
+| --- | --- |
+| Builds | [![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/sampleproject/branch/main) |
+
+## About
+
+## License
 
 This project is used for demonstrating the development of a Python project, including:
 - Testing with pytest/doctests
@@ -13,4 +21,4 @@ This project is used for demonstrating the development of a Python project, incl
 - make files
 - packaging
 - documentation
-- licensing 
+- licensing
