@@ -8,7 +8,7 @@ Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 | Builds | [![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/sampleproject/branch/main) |
 |     | [![Build Status](https://travis-ci.org/lang-m/sampleproject.svg?branch=main)](https://travis-ci.org/lang-m/sampleproject) |
 | Coverage | [![codecov](https://codecov.io/gh/lang-m/sampleproject/branch/main/graph/badge.svg?token=90KVILJ4F4)](https://codecov.io/gh/lang-m/sampleproject) |
-| Documentation | ![Documentation Status](https://readthedocs.org/projects/oursampleproject/badge/?version=latest)](https://oursampleproject.readthedocs.io/en/latest/?badge=latest) |
+| Documentation | [![Documentation Status](https://readthedocs.org/projects/oursampleproject/badge/?version=latest)](https://oursampleproject.readthedocs.io/en/latest/?badge=latest) |
 | Binder | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubermag/discretisedfield/master?urlpath=lab/tree/docs/ipynb/index.ipynb) |
 | License | [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) |
 
