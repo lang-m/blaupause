@@ -16,4 +16,4 @@ __dependencies__ = pkg_resources.require(__name__)
 def test():
     '''Run doctests.
     '''
-    return pytest.main(['-v', '--pyargs', 'sampleproject'])  # pragma: no cover
+    return pytest.main(['-v', '--pyargs', 'blaupause'])  # pragma: no cover
