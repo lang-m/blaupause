@@ -1,4 +1,4 @@
-from sampleproject import add
+from blaupause import add
 import pytest
 
 

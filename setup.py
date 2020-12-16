@@ -4,7 +4,7 @@ with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
 setuptools.setup(
-    name='sampleproject',
+    name='blaupause',
     version='0.1',
     description=('Example package used as a template for setting up '
                  'Python packages/repositories.'),
@@ -17,17 +17,14 @@ setuptools.setup(
     include_package_data=True,
     python_requires='>=3.8',
     install_requires=['pytest>=6.0.0'],
-    classifiers=['Development Status :: 5 - Production/Stable',
+    classifiers=['Development Status :: 3 - Alpha',
                  'Intended Audience :: Education',
                  'Intended Audience :: Developers',
-                 'Intended Audience :: Science/Research',
                  'License :: OSI Approved :: BSD License',
                  'Natural Language :: English',
                  'Operating System :: MacOS',
                  'Operating System :: Microsoft :: Windows',
                  'Operating System :: Unix',
                  'Programming Language :: Python :: 3 :: Only',
-                 'Topic :: Scientific/Engineering :: Physics',
-                 'Topic :: Scientific/Engineering :: Mathematics',
-                 'Topic :: Scientific/Engineering :: Visualization']
+                 ]
 )

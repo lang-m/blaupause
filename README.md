@@ -1,4 +1,4 @@
-# Sample Python project
+# Blaupause - Python package template
 Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 
 <sup>1</sup> *Faculty of Engineering and Physical Sciences, University of Southampton, Southampton SO17 1BJ, United Kingdom*    

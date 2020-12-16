@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'sampleproject'
+project = 'blaupause'
 copyright = '2020, Martin Lang and Marijan Beg'
 author = 'Martin Lang and Marijan Beg'
 
@@ -27,10 +27,13 @@ author = 'Martin Lang and Marijan Beg'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.napoleon',
+extensions = ['sphinx.ext.napoleon',
               'sphinx.ext.mathjax',
-              'nbsphinx']
+              'nbsphinx',
+              'sphinx.ext.autodoc',
+              'sphinx.ext.autosummary',
+              'm2r2'
+              ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -40,6 +43,20 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+autosummary_generate = True
+autoclass_content = 'class'  # 'both' to include __init__ docstring
+autosummary_imported_members = True
+
+# special methods to include in autosummary
+autosummary_context = {
+    'included_special_methods': ['__add__', '__radd__']
+}
+
+autodoc_inherit_docstrigs = True
+autodoc_default_options = {
+    'member-order': 'groupwise',
+    'exclude-members': '__init__, __weakref__'
+}
 
 # -- Options for HTML output -------------------------------------------------
 

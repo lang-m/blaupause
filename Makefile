@@ -1,4 +1,4 @@
-PROJECT=sampleproject
+PROJECT=blaupause
 IPYNBPATH=docs/ipynb/*.ipynb
 CODECOVTOKEN=1a84bf68-02e9-4313-b11b-f08df6ed7235
 PYTHON?=python3
