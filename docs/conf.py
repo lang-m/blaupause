@@ -49,7 +49,7 @@ autosummary_imported_members = True
 
 # special methods to include in autosummary
 autosummary_context = {
-    'included_special_methods': ['__add__', '__radd__']
+    'included_special_methods': ['__add__', '__radd__', '__repr__']
 }
 
 autodoc_inherit_docstrigs = True
