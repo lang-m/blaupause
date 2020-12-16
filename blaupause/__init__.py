@@ -1,7 +1,8 @@
 '''
 A small sample project.
 
-There are some functions and one class to demonstrate testing and documentation.
+There are some functions and one class to demonstrate testing
+and documentation.
 '''
 
 import pytest
