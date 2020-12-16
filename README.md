@@ -1,7 +1,7 @@
 # Blaupause - Python package template
 Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 
-<sup>1</sup> *Faculty of Engineering and Physical Sciences, University of Southampton, Southampton SO17 1BJ, United Kingdom*    
+<sup>1</sup> *Faculty of Engineering and Physical Sciences, University of Southampton, Southampton SO17 1BJ, United Kingdom*
 
 | Description | Badge |
 | --- | --- |
@@ -14,14 +14,15 @@ Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 
 ## About
 
-A sample Python-based package that can be used a tutorial for setting up a project....
+A sample Python-based package that can be used a tutorial for setting up a project.
 
-This project is used for demonstrating the development of a Python project, including:
+Demonstrated are:
 - Testing with pytest/doctests
-- code coverage
 - continuous integration
   - Travis
   - Appveyor
+  - soon: GitHub actions
+- code coverage
 - docker
 - make files
 - packaging
