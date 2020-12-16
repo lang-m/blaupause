@@ -28,7 +28,7 @@ class Blueprint:
     >>> from blaupause import Blueprint
     >>> bp = Blueprint(count=3, participants=1)
     >>> bp
-    ...
+    Blueprint(count=3, participants=1, name=standard)
     """
 
     def __init__(self, count, participants, name='standard'):
@@ -64,7 +64,7 @@ class Blueprint:
         >>> from blaupause import Blueprint
         >>> bp = Blueprint(count=6, participants=2)
         >>> bp.shares
-        3
+        3.0
         '''
         return self.count / self.participants
 
@@ -91,8 +91,8 @@ class Blueprint:
         --------
         >>> from blaupause import Blueprint
         >>> bp = Blueprint(count=2, participants=3)
-        >>> bp.mean(4)
-        2
+        >>> bp.mean_shares(4)
+        2.0
         '''
         sum = self.count + value
         return sum / self.participants
@@ -124,6 +124,11 @@ class Blueprint:
 
     def _join_names(self, names):
         return '|'.join(names)
+
+    def __repr__(self):
+        return (f'Blueprint(count={self.count}, '
+                f'participants={self.participants}, '
+                f'name={self.name})')
 
     @staticmethod
     def print_blueprint():
