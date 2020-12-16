@@ -18,7 +18,7 @@ install:
 
 test_script:
   - python -m pytest -v
-  - python -m pytest -v --doctest-modules --ignore=sampleproject/tests sampleproject
+  - python -m pytest -v --doctest-modules --ignore=blaupause/tests blaupause
   - python -m pycodestyle --filename=*.py .
   # - python -c "import discretisedfield as df; import sys; sys.exit(df.test())"
   # - python -m pytest -v --doctest-modules --ignore=discretisedfield\tests discretisedfield
