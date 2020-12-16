@@ -11,6 +11,7 @@ Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 | Documentation | [![Documentation Status](https://readthedocs.org/projects/blaupause/badge/?version=latest)](https://blaupause.readthedocs.io/en/latest/?badge=latest)|
 | Binder | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lang-m/blaupause/main?filepath=docs%2Fipynb%2Findex.ipynb) |
 | License | [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) |
+| DOI | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4327500.svg)](https://doi.org/10.5281/zenodo.4327500) |
 
 ## About
 
@@ -53,7 +54,9 @@ Licensed under the BSD 3-Clause "New" or "Revised" License. For details, please 
 
 ## How to cite
 
-2. Coming soon...
+Please cite this package as:
+
+Martin Lang and Marijan Beg. Blaupause - Python package template. Zenodo. DOI: [10.5281/zenodo.4327500](http://doi.org/10.5281/zenodo.4327500) (2020).
 
 ## Acknowledgements
 
