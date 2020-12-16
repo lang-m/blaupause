@@ -5,7 +5,7 @@ Martin Lang<sup>1</sup> and Marijan Beg<sup>1</sup>
 
 | Description | Badge |
 | --- | --- |
-| Builds | [![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/sampleproject/branch/main) |
+| Builds | [![Build status](https://ci.appveyor.com/api/projects/status/k4wb6m7btqy9lj86/branch/main?svg=true)](https://ci.appveyor.com/project/lang-m/blaupause/branch/main)|
 |     | [![Build Status](https://travis-ci.org/lang-m/blaupause.svg?branch=main)](https://travis-ci.org/lang-m/blaupause) |
 | Coverage | [![codecov](https://codecov.io/gh/lang-m/blaupause/branch/master/graph/badge.svg?token=90KVILJ4F4)](https://codecov.io/gh/lang-m/blaupause) |
 | Documentation | [![Documentation Status](https://readthedocs.org/projects/blaupause/badge/?version=latest)](https://blaupause.readthedocs.io/en/latest/?badge=latest)|
