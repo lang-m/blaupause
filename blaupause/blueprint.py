@@ -109,6 +109,9 @@ class Blueprint:
         '''
         Add two instances of ``MyClass``
         '''
+        if not isinstance(other, self.__class__):
+            msg = f'Cannot add objects of {type(self)=} and {type(other)=}'
+            raise TypeError(msg)
         count = self.count + other.count
         participants = self.participants + other.b
         name = self._join_names([self.name, other.name])
