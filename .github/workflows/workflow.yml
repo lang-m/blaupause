@@ -6,4 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: home
-        run: echo $HOME
+        run: |
+          echo $HOME
+          ls -la
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: read
+        run: ls -la
