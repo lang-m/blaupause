@@ -1,0 +1,9 @@
+name: workflow
+on: [push]
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: home
+        run: echo $HOME
