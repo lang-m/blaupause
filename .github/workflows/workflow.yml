@@ -5,7 +5,7 @@ jobs:
   workflow:
     runs-on: ubuntu-latest
     env:
-      TEST: $$GITHUB_WORKSPACE/script/hello.sh
+      TEST: $GITHUB_WORKSPACE/script/hello.sh
     steps:
       - name: home
         run: |
