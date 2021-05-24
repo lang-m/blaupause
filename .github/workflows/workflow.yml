@@ -4,8 +4,6 @@ on: [push]
 jobs:
   workflow:
     runs-on: ubuntu-latest
-    env:
-      TEST: "$GITHUB_WORKSPACE/script/hello.sh"
     steps:
       - name: home
         run: |
@@ -14,6 +12,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: Set env
+        run: echo "TEST=$GITHUB_WORKSPACE/script/hello.sh" >> $GITHUB_ENV
       - name: test-env
         run: |
           echo pwd
