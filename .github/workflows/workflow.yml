@@ -21,6 +21,6 @@ jobs:
           echo $TEST
       - name: run hello script
         run:
-          bash TEST
+          bash $TEST
       - name: read
         run: ls -la
