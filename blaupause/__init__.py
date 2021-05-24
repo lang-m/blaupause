@@ -18,3 +18,6 @@ def test():
     '''Run doctests.
     '''
     return pytest.main(['-v', '--pyargs', 'blaupause'])  # pragma: no cover
+
+if __name__ == '__main__':
+    main()
