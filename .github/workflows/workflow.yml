@@ -19,7 +19,7 @@ jobs:
         run: echo "TEST=$GITHUB_WORKSPACE/script/hello.sh" >> $GITHUB_ENV
       - name: checkout branch
         run: |
-          if git rev-parse --quiet --verify time-dependence > /dev/null; then git checkout time-dependence; fi
+          if git rev-parse --quiet --verify time-dependence; then git checkout time-dependence; fi
       - name: test branch
         run: git branch
       - name: test-env
