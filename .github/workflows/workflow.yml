@@ -4,6 +4,9 @@ on: [push]
 jobs:
   workflow:
     runs-on: ubuntu-latest
+    defaults:
+      runs:
+        shell: bash -l {0}
     steps:
       - name: home
         run: |
