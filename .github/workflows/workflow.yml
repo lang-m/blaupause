@@ -5,7 +5,7 @@ jobs:
   workflow:
     runs-on: ubuntu-latest
     defaults:
-      runs:
+      run:
         shell: bash -l {0}
     steps:
       - name: home
