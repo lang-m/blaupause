@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setuptools.setup(
     name='blaupause',
-    version='0.1.2',
+    version='0.1.3',
     description=('Example package used as a template for setting up '
                  'Python packages/repositories.'),
     # these two lines allow using markdown README
