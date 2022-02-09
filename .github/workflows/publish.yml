@@ -37,6 +37,11 @@ jobs:
     - name: Build wheel and sdist
       run: python -m build --sdist --wheel --outdir dist .
 
+    - name: <debug>
+      run: |
+        ls -l
+        ls -l dist
+
     - name: Publish distribution
       uses: pypa/gh-action-pypi-publish@master
       with:
