@@ -24,7 +24,7 @@ jobs:
         python-version: 3.9
 
     - name: Tag last commit
-      run: git tag {{ version }}
+      run: git tag ${{ github.event.inputs.version }}
 
     - name: Merge to stable branch
       run: |
