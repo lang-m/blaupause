@@ -1,5 +1,6 @@
-# based on https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
 name: Publish package
+
+# based on https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
 
 on:
   workflow_dispatch:
@@ -7,6 +8,7 @@ on:
     branches:
       - main
     tags:
+      - '*'
   pull_request:
 
 jobs:
