@@ -7,7 +7,6 @@ and documentation.
 
 import pytest
 import importlib.metadata
-import pkg_resources
 from .functions import add, subtract, multiply
 from .blueprint import Blueprint
 
