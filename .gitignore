@@ -1,3 +1,6 @@
 __pycache__
 .coverage
 .ipynb_checkpoints
+docs/_autosummary
+docs/_build
+venv
