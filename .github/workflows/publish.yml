@@ -1,5 +1,5 @@
 # based on https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
-name: Publish package to PyPI
+name: Publish package
 
 on:
   workflow_dispatch:
@@ -57,9 +57,7 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
 
   github-release:
-    name: >-
-      Sign the Python 🐍 distribution 📦 with Sigstore
-      and upload them to GitHub Release
+    name: GitHub Release
     needs:
     - publish-to-pypi
     runs-on: ubuntu-latest
