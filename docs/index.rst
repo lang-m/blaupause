@@ -6,9 +6,10 @@
 Welcome to blaupause's documentation!
 =====================================
 
-.. mdinclude:: ../README.md
-   :start-line: 14
-   :end-line: 31
+``blaupause`` is a sample Python-based package that can be used a tutorial for setting up a project.
+
+Tutorials
+---------
 
 .. toctree::
    :maxdepth: 2
@@ -16,9 +17,9 @@ Welcome to blaupause's documentation!
 
    ipynb/tutorial
 
-API-reference
+API reference
 -------------
-   
+
 .. autosummary::
    :toctree: _autosummary
    :caption: API Reference
