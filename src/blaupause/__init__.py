@@ -6,18 +6,19 @@ and documentation.
 '''
 
 import pytest
+import importlib.metadata
 import pkg_resources
 from .functions import add, subtract, multiply
 from .blueprint import Blueprint
 
-__version__ = pkg_resources.get_distribution(__name__).version
-__dependencies__ = pkg_resources.require(__name__)
+__version__ = importlib.metadata.version(__package__)
 
 
 def test():
     '''Run doctests.
     '''
     return pytest.main(['-v', '--pyargs', 'blaupause'])  # pragma: no cover
+
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,32 @@
+name: workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install package
+        run: pip install .
+
+      # TODO move to pyproject.toml
+      - name: install test dependencies
+        run: pip install pycodestyle
+
+      - name: style
+        run: pycodestyle src/blaupause
+
+      - name: test
+        run: pytest
