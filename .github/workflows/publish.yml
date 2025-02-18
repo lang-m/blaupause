@@ -99,3 +99,7 @@ jobs:
         gh release upload
         "$GITHUB_REF_NAME" dist/**
         --repo "$GITHUB_REPOSITORY"
+    - name: Update latest tag
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: latest-tag.yml

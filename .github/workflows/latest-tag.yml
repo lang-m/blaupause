@@ -1,8 +1,6 @@
 name: Add latest tag
 on:
   workflow_dispatch:
-  release:
-    types: [published]
 
 jobs:
   run:
