@@ -9,6 +9,7 @@ on:
       - main
     tags:
       - '*'
+      - "!latest"
   pull_request:
 
 jobs:
