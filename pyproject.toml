@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "blaupause"
-version = "0.1.9"
+version = "0.1.10"
 dependencies = [
     "pytest",
 ]
