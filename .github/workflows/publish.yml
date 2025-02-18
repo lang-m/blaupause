@@ -100,6 +100,8 @@ jobs:
         "$GITHUB_REF_NAME" dist/**
         --repo "$GITHUB_REPOSITORY"
   latest-tag:
+    needs:
+      - github-release
     name: Call latest tag workflow
     runs-on: ubuntu-latest
     steps:
