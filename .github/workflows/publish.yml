@@ -13,7 +13,12 @@ on:
   pull_request:
 
 jobs:
+  run-tests:
+    uses: ./.github/workflows/test.yml
+
   build:
+    needs:
+      - build
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -37,11 +42,6 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
-
-  run-tests:
-    needs:
-        - build
-    uses: ./.github/workflows/test.yml
   
   publish-to-pypi:
     name: Publish to PyPI
@@ -106,7 +106,7 @@ jobs:
         --repo "$GITHUB_REPOSITORY"
   latest-tag:
     needs:
-      - github-release
+      - publish-to-pypi
     name: Update latest tag
     runs-on: ubuntu-latest
     steps:
