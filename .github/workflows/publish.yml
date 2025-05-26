@@ -41,7 +41,7 @@ jobs:
 
   check_version:
     name: Check wheel version
-    if: startsWith(github.ref, 'refs/tags/')  # only publish on tag pushes
+      # if: startsWith(github.ref, 'refs/tags/')  # only publish on tag pushes
     needs:
       - build
     runs-on: ubuntu-latest
@@ -49,13 +49,15 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: "*.whl"
+      - run: ls dist/*.whl | cut -d '-' -f 2
       - name: Extract version from wheel
         run: echo "WHEEL_VERSION=$(ls dist/*.whl | cut -d '-' -f 2)" >> "$GITHUB_ENV"
-      - name: Check that wheel version and tag are identical
+      - name: Versions
         run: |-
           echo $GITHUB_REF_NAME
           echo $WHEEL_VERSION
-          test $GITHUB_REF_NAME = $WHEEL_VERSION
+      - name: Check that wheel version and tag are identical
+        run: test $GITHUB_REF_NAME = $WHEEL_VERSION
 
   publish-to-pypi:
     name: Publish to PyPI
