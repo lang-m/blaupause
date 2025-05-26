@@ -52,7 +52,7 @@ jobs:
       - name: Extract version from wheel
         run: echo WHEEL_VERSION=$(ls dist/*.whl | cut -d "-" -f 2) >> $GITHUB_ENV
       - name: Check that wheel version and tag are identical
-        run: "[ $GITHUB_REF_NAME = $WHEEL_VERSION ]"
+        run: test $GITHUB_REF_NAME = $WHEEL_VERSION
 
   publish-to-pypi:
     name: Publish to PyPI
