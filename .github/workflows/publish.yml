@@ -46,16 +46,16 @@ jobs:
       - build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v5
         with:
-          name: python-package-distributions
-          path: dist/
-      - name: Extract version from wheel
-        run: echo "WHEEL_VERSION=$(ls dist/*.whl | cut -d '-' -f 2)" >> "$GITHUB_ENV"
+          python-version: '3.13'
+      - name: Read version from pyproject.toml
+        run: echo VERSION=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])") >> "$GITHUB_ENV"
       - run: echo $GITHUB_REF_NAME
-      - run: echo $WHEEL_VERSION
-      - name: Check that wheel version and tag are identical
-        run: test $GITHUB_REF_NAME = $WHEEL_VERSION
+      - run: echo $VERSION
+      - name: Check that version and tag are identical
+        run: test $GITHUB_REF_NAME = $VERSION
 
   publish-to-pypi:
     name: Publish to PyPI
