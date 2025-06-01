@@ -50,4 +50,4 @@ jobs:
 
   build:
     if: github.event_name != 'workflow_call'
-    uses: .github/workflows/publish.yml
+    uses: ./.github/workflows/publish.yml
