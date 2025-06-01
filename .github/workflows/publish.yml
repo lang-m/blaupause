@@ -9,8 +9,7 @@ on:
       - "!latest"
 
 jobs:
-  run-tests:
-    name: test-and-build
+  test-and-build:
     uses: ./.github/workflows/test.yml
 
   check_version:
