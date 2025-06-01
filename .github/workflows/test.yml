@@ -49,5 +49,25 @@ jobs:
         run: pytest
 
   build:
-    if: github.event_name != 'workflow_call'
-    uses: ./.github/workflows/publish.yml
+    needs:
+      - style
+      - pytest
+    name: Build wheel and sdist
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+    - name: Install pypa/build
+      run: python -m pip install --user build
+    - name: Build wheel and source tarball
+      run: python -m build
+    - name: Store the distribution packages
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/

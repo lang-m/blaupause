@@ -3,40 +3,14 @@ name: Publish package
 # based on https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - '*'
       - "!latest"
-  workflow_call:
 
 jobs:
   run-tests:
-    if: github.event_name != 'workflow_call'
     uses: ./.github/workflows/test.yml
-
-  build:
-    needs:
-      - run-tests
-    name: Build wheel and sdist
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash -l {0}
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.13'
-    - name: Install pypa/build
-      run: python -m pip install --user build
-    - name: Build wheel and source tarball
-      run: python -m build
-    - name: Store the distribution packages
-      uses: actions/upload-artifact@v4
-      with:
-        name: python-package-distributions
-        path: dist/
 
   check_version:
     name: Check version
