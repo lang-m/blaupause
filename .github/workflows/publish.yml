@@ -5,15 +5,14 @@ name: Publish package
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
     tags:
       - '*'
       - "!latest"
-  pull_request:
+  workflow_call:
 
 jobs:
   run-tests:
+    if: github.event_name != 'workflow_call'
     uses: ./.github/workflows/test.yml
 
   build:
