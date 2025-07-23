@@ -17,8 +17,6 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install towncrier
-      - name: Check if a changelog fragment is present
-        run: towncrier check
       - name: Make sure exactly one valid Towncrier fragment exists
         shell: bash
         run: |
@@ -49,3 +47,5 @@ jobs:
               echo "::error::Fragment '${fragment}' must be named '${pr}.<type>.md'."
               exit 1
           fi
+      - name: Check if a changelog fragment has allowed type
+        run: towncrier check
