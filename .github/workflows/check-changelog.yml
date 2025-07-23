@@ -42,6 +42,6 @@ jobs:
           if [[ "$fragment" =~ ^${pr}\.[^.]+\.md$ ]]; then
               echo "✔ Fragment '${fragment}' is valid."
           else
-              echo "::error::Fragment '${fragment}' must be named '${pr}.\<type\>.md'."
+              echo "::error::Fragment '${fragment}' must be named '${pr}.<type>.md'."
               exit 1
           fi
