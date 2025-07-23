@@ -11,4 +11,4 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install towncrier
-      - run: towncrier check
+      - run: towncrier check --compare-with $GITHUB_BASE_REF
