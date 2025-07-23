@@ -24,21 +24,22 @@ jobs:
           dir="changes"
           pr="$PR_NUMBER"
 
-          # Collect *.md fragments (skip README and any sub-dirs)
+          # Collect *.md fragments (skip README)
           mapfile -t fragments < <(
               find "$dir" -type f -name '*.md' ! -name 'README.md' -printf '%P\n'
           )
 
           # 1) Exactly one fragment?
           if [ "${#fragments[@]}" -ne 1 ]; then
-              echo "::error::Exactly one change fragment is required, found ${#fragments[@]}."
+              echo "::error::Exactly one changelog fragment is required, found ${#fragments[@]}."
               printf 'Found fragments:\n%s\n' "${fragments[*]}"
               exit 1
           fi
 
           fragment="${fragments[0]}"
 
-          # 2) Name must be <PR\>.\<type\>.md   (type = any non-dot string)
+          # 2) Name must be <PR>.<type>.md   (type = any non-dot string);
+          # type checks have already been performed by towncrier check
           if [[ "$fragment" =~ ^${pr}\.[^.]+\.md$ ]]; then
               echo "✔ Fragment '${fragment}' is valid."
           else
