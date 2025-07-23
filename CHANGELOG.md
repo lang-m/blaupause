@@ -6,7 +6,7 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 <!-- towncrier release notes start -->
 
-## [blaupause 0.1.3](https://github.com/lang-m/blaupause/tree/0.1.3) - 2025-07-23
+## [blaupause 0.1.17](https://github.com/lang-m/blaupause/tree/0.1.17) - 2025-07-23
 
 ### Features
 
