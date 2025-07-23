@@ -1,0 +1,14 @@
+on:
+  pull_request:
+
+jobs:
+  check_changelog_fragment:
+    name: Check if a towncrier changelog exists
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install towncrier
+      - run: towncrier check
