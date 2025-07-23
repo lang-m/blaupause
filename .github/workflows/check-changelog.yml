@@ -3,8 +3,9 @@ on:
 
 jobs:
   check_changelog_fragment:
-    name: Check if a towncrier changelog exists
     runs-on: ubuntu-latest
+    env:
+      PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -13,13 +14,34 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install towncrier
-      - run: towncrier check
+      - name: Check if a changelog fragment is present
+        run: towncrier check
+      - name: Make sure exactly one valid Towncrier fragment exists
+        shell: bash
+        run: |
+          set -euo pipefail
 
-  changelog_checker:
-    name: Check if towncrier change log entry is correct
-    runs-on: ubuntu-latest
-    steps:
-    - uses: scientific-python/action-towncrier-changelog@1d7332022f76e36fe8ce2d716b851f3f98063c62  # v1.0.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BOT_USERNAME: changelog-bot
+          dir="changes"
+          pr="$PR_NUMBER"
+
+          # Collect *.md fragments (skip README and any sub-dirs)
+          mapfile -t fragments \< <(
+              find "$dir" -type f -name '*.md' ! -name 'README.md' -printf '%P\n'
+          )
+
+          # 1) Exactly one fragment?
+          if [ "${#fragments[@]}" -ne 1 ]; then
+              echo "::error::Exactly one change fragment is required, found ${#fragments[@]}."
+              printf 'Found fragments:\n%s\n' "${fragments[*]}"
+              exit 1
+          fi
+
+          fragment="${fragments[0]}"
+
+          # 2) Name must be <PR\>.\<type\>.md   (type = any non-dot string)
+          if [[ "$fragment" =~ ^${pr}\.[^.]+\.md$ ]]; then
+              echo "✔ Fragment '${fragment}' is valid."
+          else
+              echo "::error::Fragment '${fragment}' must be named '${pr}.\<type\>.md'."
+              exit 1
+          fi
