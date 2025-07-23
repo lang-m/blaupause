@@ -25,6 +25,12 @@ license-files = ["LICENSE"]
 Homepage = "https://github.com/lang-m/blaupause"
 # Documentation
 
+[tool.towncrier]
+directory = "changes"
+filename = "CHANGELOG.md"
+package = "blaupause"
+issue_format = "[#{issue}](https://github.com/lang-m/blaupause/pulls/{issue})"
+
 [tool.changelog-bot]
 [tool.changelog-bot.towncrier_changelog]
 enabled = true
