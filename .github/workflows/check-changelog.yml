@@ -1,3 +1,5 @@
+name: check-changelog
+
 on:
   pull_request:
 
