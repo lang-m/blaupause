@@ -29,13 +29,5 @@ Homepage = "https://github.com/lang-m/blaupause"
 directory = "changes"
 filename = "CHANGELOG.md"
 package = "blaupause"
+title_format = "## [blaupause {version}](https://github.com/lang-m/blaupause/tree/{version}) - {project_date}"
 issue_format = "[#{issue}](https://github.com/lang-m/blaupause/pulls/{issue})"
-
-[tool.changelog-bot]
-[tool.changelog-bot.towncrier_changelog]
-enabled = true
-verify_pr_number = true
-changelog_skip_label = "no-changelog-entry-needed"
-changelog_missing_long = "There is no changelog fragment in this pull request. Please add a file to the `changes/` directory following instructions in the [changelog README](https://github.com/lang-m/blaupause/blob/main/changes/README.md)."
-type_incorrect_long = "The changelog file you added is not one of the allowed types. ..."
-number_incorrect_long = "The number in the changelog file you added does not match the number of this pull request. Please rename the file."
