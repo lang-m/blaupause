@@ -26,7 +26,7 @@ jobs:
 
           mapfile -t fragments < <(find ${dir} -type f -name "${PR_NUMBER}.*.md" -printf '%P\n')
 
-          count=${#matches[@]}
+          count=${#fragments[@]}
 
           if [ "$count" -eq 1]; then
               echo "Found changelog fragment: ${matches[0]}"
