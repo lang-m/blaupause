@@ -69,7 +69,7 @@ jobs:
             exit 1
           fi
 
-          echo "✔ CHANGELOG heading matches the pushed tag ($tag)"
+          echo "✔ CHANGELOG heading matches the pushed tag ($GITHUB_REF_NAME)"
 
   publish-to-pypi:
     name: Publish to PyPI
