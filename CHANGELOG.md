@@ -10,8 +10,8 @@ This project uses [towncrier](https://towncrier.readthedocs.io/) and the changes
 
 ### Features
 
-- Add [towncrier](https://towncrier.readthedocs.io/) to generate changelog. ([#5](https://github.com/lang-m/blaupause/pulls/5))
+- Add [towncrier](https://towncrier.readthedocs.io/) to generate changelog. ([#5](https://github.com/lang-m/blaupause/pull/5))
 
 ### Misc
 
-- [#6](https://github.com/lang-m/blaupause/pulls/6)
+- [#6](https://github.com/lang-m/blaupause/pull/6)
